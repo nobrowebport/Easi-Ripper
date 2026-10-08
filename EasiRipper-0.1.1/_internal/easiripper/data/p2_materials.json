@@ -1,0 +1,43 @@
+{
+  "_readme": "Texture -> Roblox material rules for the Roblox map export (first match wins). 'variant' is a MaterialVariant name in your MaterialService (leave empty for none). Copy this file, edit it and pass it with --materials.",
+  "rules": [
+    {"match": "toolsskip|toolshint", "special": "skip"},
+    {"match": "toolsnodraw|toolsskybox|toolsblack", "special": "skipface"},
+    {"match": "toolsclip|toolsplayerclip|toolsinvisible", "special": "invisible"},
+    {"match": "tools/", "special": "skip"},
+    {"match": "white|concrete.*(white|light)|plaster", "variant": "", "base": "SmoothPlastic", "color": [235, 235, 235], "portalable": true},
+    {"match": "glass", "variant": "", "base": "Glass", "color": [200, 230, 255], "transparency": 0.6, "portalable": false},
+    {"match": "grate|mesh|fence", "variant": "", "base": "DiamondPlate", "color": [110, 110, 110], "portalable": false},
+    {"match": "metal|black|panel|elevator", "variant": "", "base": "Metal", "color": [60, 62, 66], "portalable": false},
+    {"match": "concrete|cement|wall", "variant": "", "base": "Concrete", "color": [150, 150, 150], "portalable": false},
+    {"match": "wood|plank", "variant": "", "base": "WoodPlanks", "color": [140, 100, 60], "portalable": false},
+    {"match": "grass|foliage|leaf", "variant": "", "base": "Grass", "color": [80, 120, 60], "portalable": false},
+    {"match": "water|slime|goo", "variant": "", "base": "Glass", "color": [60, 80, 50], "transparency": 0.3, "collide": false, "portalable": false},
+    {"match": ".*", "variant": "", "base": "SmoothPlastic", "color": [170, 170, 170], "portalable": false}
+  ],
+  "entities": {
+    "_readme": "classname -> what to place. spawn: a SpawnLocation; asset: a placeholder swapped for ReplicatedStorage.PortalAssets.<asset>; skip: nothing",
+    "info_player_start": {"spawn": "PlayerSpawn"},
+    "info_player_deathmatch": {"spawn": "PlayerSpawn"},
+    "info_player_terrorist": {"spawn": "PlayerSpawn"},
+    "info_player_counterterrorist": {"spawn": "PlayerSpawn"},
+    "info_coop_spawn": {"spawn": "coop"},
+    "prop_floor_button": {"asset": "Button", "size": [4, 1, 4]},
+    "prop_floor_cube_button": {"asset": "Button", "size": [4, 1, 4]},
+    "prop_floor_ball_button": {"asset": "Button", "size": [4, 1, 4]},
+    "prop_button": {"asset": "PedestalButton", "size": [1, 3, 1]},
+    "prop_under_button": {"asset": "PedestalButton", "size": [1, 3, 1]},
+    "prop_weighted_cube": {"asset": "Cube", "cube": true, "size": [3, 3, 3]},
+    "prop_monster_box": {"asset": "Cube", "cube": true, "size": [3, 3, 3]},
+    "prop_testchamber_door": {"asset": "Door", "size": [8, 9, 1]},
+    "npc_portal_turret_floor": {"asset": "Turret", "size": [2, 4, 2]},
+    "env_portal_laser": {"asset": "Laser Emitter", "size": [2, 2, 2]},
+    "prop_laser_catcher": {"asset": "Laser Catcher", "size": [2, 2, 2]},
+    "prop_laser_relay": {"asset": "Laser Catcher", "size": [2, 4, 2]},
+    "prop_tractor_beam": {"asset": "TBeam", "size": [4, 4, 2]},
+    "prop_wall_projector": {"asset": "LightBridgeFree", "size": [4, 2, 1]},
+    "trigger_portal_cleanser": {"asset": "Fizzler", "brush": true},
+    "trigger_catapult": {"asset": "FaithPlate", "brush": true},
+    "trigger_hurt": {"zone": "P2Hurt", "brush": true}
+  }
+}

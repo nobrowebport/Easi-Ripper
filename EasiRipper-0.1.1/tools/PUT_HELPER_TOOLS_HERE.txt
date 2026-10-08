@@ -1,0 +1,3 @@
+Optional helpers EasiRipper finds automatically in this folder:
+  AssetRipper (Unity project decompiling): https://github.com/AssetRipper/AssetRipper/releases
+  Source2Viewer CLI (Source 2 games):      https://github.com/ValveResourceFormat/ValveResourceFormat/releases
